@@ -1,5 +1,5 @@
 FROM nginx:alpine
 
-COPY public/ /usr/share/nginx/html/
+COPY app/ /usr/share/nginx/html/
 
 EXPOSE 80
