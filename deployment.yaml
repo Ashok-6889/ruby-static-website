@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ruby-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ruby-web
+  template:
+    metadata:
+      labels:
+        app: ruby-web
+    spec:
+      containers:
+      - name: ruby-web
+        image: ashok6889/ruby-static-website:latest
+        ports:
+        - containerPort: 80
